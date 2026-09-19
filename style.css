@@ -1,0 +1,230 @@
+root {
+   --header-height: 100px;
+}
+body {
+   
+    background-color: #d0d9cd;
+    color: black;
+    font-family: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
+    margin: 0;
+    padding-top: 95px;
+    text-align: center;
+
+}
+h2 { 
+    
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h4
+    {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+h6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+section{
+    border-bottom: .1em solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    &:nth-child(4) {
+        border-bottom: none;
+        
+    }
+}
+p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    font-family: "Changa One", sans-serif;
+    color: inherit;
+}
+.nav-container {
+    text-align: left;
+   
+   ul {
+    background-color: #d0d9cd;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+       
+       padding: 10px;
+       padding-left: 20px;
+       border-top:  .1em solid #333;
+        &:nth-child(4) {
+        border-bottom: .1em solid #333;
+        
+    }
+    }
+    
+    
+}
+}
+
+img {
+    
+    width: 100%;
+    
+    }
+
+
+.logo-h1 {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    box-sizing: border-box;
+    background-color: #8d978a;
+    justify-content: center;
+    text-decoration: none;
+    padding-right: 100%;
+    padding-bottom: 5px;
+    
+}
+.logo-h1 h1 {
+    margin-left: 10px;
+    font-family: "Changa One", sans-serif;
+    font-size: 2em;
+    color: #333;
+    
+}
+
+.logo {
+    width: 5rem;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.hero {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    
+}
+
+
+
+button {
+    background-color: #967969;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 15px;
+}   
+
+.puffar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+    h5 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-left: 2vh;
+    margin-top: 3vh;      
+    margin-bottom: 1vh; 
+    
+}
+    
+    p {
+        text-align: left;
+        padding-left: 2vh;
+        padding-right: 2vh;
+        padding-bottom: 2vh;
+       
+    }
+    .puff {
+        border-radius: 15px;
+        background-color: #546355;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+}
+
+
+.logo-footer {
+    p {
+    font-size: 1.2rem;
+   }
+   .footer-logo-text {
+    font-size: 1.4rem;
+    font-weight: bolder;
+   }
+}
+
+.footer-container {
+    background-color: #645C5C;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 70% 30%;
+
+    .logo-footer {
+        
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        
+    }
+    .kontakt {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        .kontakt-head {
+             font-size: 1.2rem;
+        font-family: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
+        font-weight: bold;
+       
+        }
+        
+    }
+    .links {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+       padding-bottom: 70px;
+       p {
+        font-size: 1.2rem;
+        font-family: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
+        font-weight: bold;
+       }
+
+        a {
+            font-family: sans-serif;
+            font-weight: 100;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            line-height: 1.5;
+        }
+    }
+}
