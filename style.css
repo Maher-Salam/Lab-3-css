@@ -1,47 +1,72 @@
-root {
-   --header-height: 100px;
+:root {
+   --header-height: 98px;
+   --primary-background: #d0d9cd;
+   --primary-font: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
+   --color2: #082D0F;
+   --color3: #9DC5BB;
 }
+
 body {
    
-    background-color: #d0d9cd;
+    background-color: var(--primary-background);
     color: black;
-    font-family: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
+    font-family: var(--primary-font); 
     margin: 0;
-    padding-top: 95px;
+    padding-top: var(--header-height);
     text-align: center;
-
 }
+
+a:hover,
+a:focus-visible {
+    outline: none;
+    background-color: rgba(50, 133, 31, 0.24);
+    border-radius: .3rem;
+}
+
+.puff:focus-visible,
+.puff:hover{
+    background-color: rgba(50, 133, 31, 0.24);
+    border-radius: .1rem;
+    outline: none;   
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+button:focus-visible,
+button:hover {
+     
+    background-color: rgb(54, 45, 38);
+    outline: 1px white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 h2 { 
     
     font-size: 1.7rem;
     font-weight: bold;
 }
 
-h3 {
+h3, h4, h6 {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-h4
-    {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-h6 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
 
 section{
-    border-bottom: .1em solid #333;
+    border-bottom: .1em solid #fff;
     padding-bottom: 20px;
-    margin-bottom: 10px;
+    
     &:nth-child(4) {
         border-bottom: none;
         
     }
 }
+.third-section {
+    background-color: var(--color3);
+     padding-top: .1vh;
+}
+
 p {
     text-align: center;
     font-size: 1rem;
@@ -50,6 +75,7 @@ p {
     padding: 0;
 }
 a {
+    
     text-decoration: none;
     font-family: "Changa One", sans-serif;
     color: inherit;
@@ -58,54 +84,56 @@ a {
     text-align: left;
    
    ul {
-    background-color: #d0d9cd;
+    background-color: var(--color3);
     list-style-type: none;
     padding: 0;
     margin: 0;
     li {
        
-       padding: 10px;
-       padding-left: 20px;
-       border-top:  .1em solid #333;
+       padding: 10px 10px 10px 20px;
+       border-top:  .1em solid #fff;
+
         &:nth-child(4) {
-        border-bottom: .1em solid #333;
+        border-bottom: .1em solid #fff;
         
-    }
-    }
-    
-    
+        }
+    }  
 }
 }
 
 img {
     
     width: 100%;
-    
+    height: auto;
     }
 
 
 .logo-h1 {
     display: flex;
+    justify-content: left;
     align-items: center;
     position: fixed;
+    height: var(--header-height);
     top: 0px;
     left: 0px;
+    right: 0px;
     z-index: 1000;
     box-sizing: border-box;
-    background-color: #8d978a;
-    justify-content: center;
-    text-decoration: none;
-    padding-right: 100%;
+    background-color: #082D0F;
     padding-bottom: 5px;
+
+    
+        
+        h1 {
+         margin-left: 10px;
+         font-family: "Changa One", sans-serif;
+         font-weight: 500;
+         font-size: 2em;
+         color: rgb(163, 196, 174);
+    }
     
 }
-.logo-h1 h1 {
-    margin-left: 10px;
-    font-family: "Changa One", sans-serif;
-    font-size: 2em;
-    color: #333;
-    
-}
+
 
 .logo {
     width: 5rem;
@@ -132,6 +160,8 @@ button {
     cursor: pointer;
     margin-top: 20px;
     border-radius: 15px;
+    cursor: pointer; 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }   
 
 .puffar {
@@ -141,14 +171,10 @@ button {
     margin-left: 10%;
     margin-right: 10%;
     text-align: left;
-    img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-    }
+  
     h5 {
     font-size: 1.2rem;
-    font-weight: bolder;
+    font-weight: 500;
     padding-left: 2vh;
     margin-top: 3vh;      
     margin-bottom: 1vh; 
@@ -160,19 +186,29 @@ button {
         padding-left: 2vh;
         padding-right: 2vh;
         padding-bottom: 2vh;
-       
+        font-family: var(--primary-font);
+        font-size: .9rem;
     }
     .puff {
         border-radius: 15px;
         background-color: #546355;
         color: #fff;
         margin-bottom: 20px;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+    .puff-link img {
+         display: block;
+         padding:0;
+         width: 100%;
+         height: auto;
+        border-radius: 15px;
     }
 }
 
 
+
 .logo-footer {
-    p {
+     p {
     font-size: 1.2rem;
    }
    .footer-logo-text {
@@ -185,10 +221,26 @@ button {
     background-color: #645C5C;
     padding-top: 2vh;
     padding-bottom: 4vh;
+    gap: 3vh;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 70% 30%;
+    grid-template-rows: auto auto;
+    
+    a:focus-visible {
+    background-color: transparent;
+    outline: none;
+    text-decoration: underline; 
+
+}
+    a:hover {
+    color: grey;
+    background-color: transparent;
+    outline: none;
+    text-decoration: underline;
+    padding: 0;
+    
+}
 
     .logo-footer {
         
@@ -201,9 +253,8 @@ button {
         grid-row: 2 / 3;
 
         .kontakt-head {
-             font-size: 1.2rem;
-        font-family: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
-        font-weight: bold;
+            font-size: 1.2rem;
+            font-weight: bold;
        
         }
         
@@ -211,10 +262,9 @@ button {
     .links {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-       padding-bottom: 70px;
+       
        p {
         font-size: 1.2rem;
-        font-family: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
         font-weight: bold;
        }
 
