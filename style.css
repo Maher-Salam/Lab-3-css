@@ -289,12 +289,7 @@ button {
 
 @media (min-width: 768px) {
 
-    /*
-    hero text bild knappar
-    puffar sida vid sida
-    section 4 text och knapp sida vid sida
-    footer 
-    */
+   
     header {
     display: flex;
     justify-content: space-between;
