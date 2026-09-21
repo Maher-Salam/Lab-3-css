@@ -2,8 +2,7 @@
    --header-height: 98px;
    --primary-background: #d0d9cd;
    --primary-font: "LINE Seed JP", Georgia, Times, 'Times New Roman', serif, sans-serif; 
-   --color2: #082D0F;
-   --color3: #9DC5BB;
+   --color2: #9DC5BB;
 }
 
 body {
@@ -23,11 +22,8 @@ a:focus-visible {
     border-radius: .3rem;
 }
 
-.puff:focus-visible,
+.puff:focus-within,
 .puff:hover{
-    background-color: rgba(50, 133, 31, 0.24);
-    border-radius: .1rem;
-    outline: none;   
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
@@ -36,7 +32,6 @@ button:focus-visible,
 button:hover {
      
     background-color: rgb(54, 45, 38);
-    outline: 1px white;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -64,14 +59,14 @@ section{
         padding-right: 10%;
     }
     &:nth-child(1) {
-        border-bottom: .1em solid #fff;;
+        border-bottom: .1em solid #fff;
         
     }
 }
 
 .third-section {
-    background-color: var(--color3);
-     padding-top: .1vh;
+    background-color: var(--color2);
+     padding-top: 1vh;
 }
 
 p {
@@ -91,7 +86,7 @@ a {
     text-align: left;
    
    ul {
-    background-color: var(--color3);
+    background-color: var(--color2);
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -109,7 +104,6 @@ a {
 }
 
 img {
-    
     width: 100%;
     height: auto;
     }
@@ -174,8 +168,9 @@ button {
 
 .puffar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 5vw;
     margin-left: 10vw;
     margin-right: 10vw;
     text-align: left;
@@ -183,22 +178,28 @@ button {
     h5 {
     font-size: 1.2rem;
     font-weight: 500;
-    padding-left: 2vh;
-    margin-top: 3vh;      
-    margin-bottom: 1vh; 
+    padding-left: 7%;
+    margin-top: 5%;      
+    margin-bottom: 2%;
     
 }
     
     p {
         text-align: left;
-        padding-left: 2vh;
-        padding-right: 2vh;
-        padding-bottom: 2vh;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-bottom: 7%;
+        
         font-family: var(--primary-font);
         font-size: .9rem;
     }
     .puff {
+        
+        min-width: 250px;
+        max-width: 400px;
+        flex: 1;
         border-radius: 15px;
+        overflow: hidden;
         background-color: #546355;
         color: #fff;
         margin-bottom: 20px;
@@ -209,7 +210,6 @@ button {
          padding: 0;
          width: 100%;
          height: auto;
-        border-radius: 15px;
     }
 }
 
@@ -263,7 +263,14 @@ button {
         .kontakt-head {
             font-size: 1.2rem;
             font-weight: bold;
-       
+        }
+         a {
+            font-family: sans-serif;
+            font-weight: 100;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            line-height: 1.5;
         }
         
     }
@@ -279,7 +286,7 @@ button {
         a {
             font-family: sans-serif;
             font-weight: 100;
-            display: flex;
+            display: block;
             justify-content: center;
             flex-direction: row;
             line-height: 1.5;
@@ -300,7 +307,7 @@ button {
     left: 0px;
     right: 0px;
     z-index: 1000;
-    padding-right: 3vh;
+    padding-right: 5%;
     background-color: #082D0F;
       } 
       
@@ -348,10 +355,11 @@ button {
         .hero-content {
             text-align: left;
             align-self: center;
-            font-size: 2vh;
+            font-size: 2rem;
             grid-column: 1 / 2;
             grid-row: 2 / 3;
-            margin-left: 4vh;
+            margin-left: 4vw;
+         
             p {
                 text-align: left;
                 padding:0%
@@ -364,16 +372,7 @@ button {
         }
       
     }
-    .puffar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 5vw;
-        
-    }
-    .puff {
-        flex: 1;
-    }
+  
 
     .sec-4 {
     display: flex;
